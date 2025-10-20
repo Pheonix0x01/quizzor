@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "question": "What does HTTP stand for?",
+    "options": ["HyperText Transfer Protocol", "Hyperlink Transfer Program", "Host Transfer Process", "HyperText Transmission Path"],
+    "answer_index": 0,
+    "hint": "It's used for communication between web browsers and servers."
+  },
+  {
+    "id": 2,
+    "question": "Which programming language is known as the 'mother of all languages'?",
+    "options": ["C", "Assembly", "FORTRAN", "COBOL"],
+    "answer_index": 0,
+    "hint": "It influenced many modern programming languages."
+  },
+  {
+    "id": 3,
+    "question": "What does CSS stand for?",
+    "options": ["Computer Style Sheets", "Cascading Style Sheets", "Creative Style Sheets", "Colorful Style Sheets"],
+    "answer_index": 1,
+    "hint": "It's used for styling web pages."
+  },
+  {
+    "id": 4,
+    "question": "Which company developed the React JavaScript library?",
+    "options": ["Google", "Microsoft", "Facebook", "Twitter"],
+    "answer_index": 2,
+    "hint": "It's the same company that owns Instagram."
+  },
+  {
+    "id": 5,
+    "question": "What does API stand for?",
+    "options": ["Application Programming Interface", "Advanced Programming Interface", "Application Process Interface", "Automated Programming Interface"],
+    "answer_index": 0,
+    "hint": "It allows different software applications to communicate."
+  },
+  {
+    "id": 6,
+    "question": "Which database type is MongoDB?",
+    "options": ["Relational", "NoSQL", "Graph", "Hierarchical"],
+    "answer_index": 1,
+    "hint": "It stores data in JSON-like documents."
+  },
+  {
+    "id": 7,
+    "question": "What does Git primarily help with?",
+    "options": ["Database management", "Version control", "Web hosting", "Code compilation"],
+    "answer_index": 1,
+    "hint": "It tracks changes in source code during software development."
+  },
+  {
+    "id": 8,
+    "question": "Which HTTP status code indicates 'Not Found'?",
+    "options": ["200", "301", "404", "500"],
+    "answer_index": 2,
+    "hint": "It's a very common error code you see on the web."
+  },
+  {
+    "id": 9,
+    "question": "What does JSON stand for?",
+    "options": ["JavaScript Object Notation", "Java Standard Object Notation", "JavaScript Oriented Notation", "Java Simple Object Notation"],
+    "answer_index": 0,
+    "hint": "It's a lightweight data interchange format."
+  },
+  {
+    "id": 10,
+    "question": "Which company created the Flutter framework?",
+    "options": ["Facebook", "Apple", "Google", "Microsoft"],
+    "answer_index": 2,
+    "hint": "It's the same company that created Android."
+  }
+]
