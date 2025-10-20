@@ -75,44 +75,6 @@ flutter build ios --release
 
 The release APK will be available at: `build/app/outputs/flutter-apk/app-release.apk`
 
-## 🏗️ Project Structure
-
-```
-lib/
-├── main.dart                 # App entry point
-├── core/
-│   ├── providers/           # State management (Provider)
-│   ├── services/            # Audio & quiz data services
-│   └── theme/              # App themes (light/dark)
-├── data/
-│   └── models/             # Question data model
-├── ui/
-│   ├── screens/            # App screens (Launch, Home, Quiz, Results)
-│   └── widgets/            # Reusable UI components
-└── assets/
-    ├── audio/              # Sound files
-    └── data/               # Quiz questions (JSON)
-```
-
-## 🎯 Technical Stack
-
-- **Framework:** Flutter
-- **Language:** Dart
-- **State Management:** Provider
-- **Local Storage:** SharedPreferences
-- **Audio:** AudioPlayers
-- **Fonts:** Google Fonts (Poppins)
-- **Animations:** Flutter Animate
-
-## 📱 App Flow
-
-1. **Launch Screen** - Animated splash with app branding
-2. **Home Screen** - Welcome screen with theme/audio toggles
-3. **Quiz Screen** - Interactive question-answer interface
-4. **Results Screen** - Score display and answer review
-
-## 🎨 Customization
-
 ### Adding Questions
 Edit `assets/data/quizzes.json` to add more questions:
 ```json
@@ -125,11 +87,6 @@ Edit `assets/data/quizzes.json` to add more questions:
 }
 ```
 
-### Themes
-Modify `lib/core/theme/app_theme.dart` to customize colors and styling.
-
-### Audio
-Replace audio files in `assets/audio` with your preferred sounds.
 
 ## 🧪 Testing
 
@@ -143,37 +100,14 @@ Run on device/emulator:
 flutter run
 ```
 
-## 📱 Platform Support
 
-- ✅ **Android** (API 21+)
-- ✅ **iOS** (iOS 12+)
-- ✅ **Web** (with audio limitations)
-- ✅ **Desktop** (Windows, macOS, Linux)
 
-## 🎯 Built for HNG Internship
+## screenshots
 
-This app was built as part of the **HNG Internship Mobile Track Stage 1** challenge, demonstrating:
-- Clean app architecture
-- Smooth user navigation
-- Interactive UI elements
-- State management
-- Local data handling
-- Audio integration
+<img width="408" height="740" alt="image" src="https://github.com/user-attachments/assets/87403cac-28f9-4f52-b35f-ff73d10cf445" />
+<img width="400" height="745" alt="image" src="https://github.com/user-attachments/assets/eb9f5549-dcb4-4b6c-857a-32fd3f72d4e5" />
+<img width="393" height="745" alt="image" src="https://github.com/user-attachments/assets/8fac4501-412b-4e08-a952-118b141924ed" />
 
-## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
 
-## 📄 License
 
-This project is open source and available under the MIT License.
-
----
-
-**Built with ❤️ and Flutter**
-
-*Ready to test your tech knowledge? Download and start quizzing!* 🚀
