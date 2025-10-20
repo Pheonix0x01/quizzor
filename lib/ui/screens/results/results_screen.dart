@@ -63,23 +63,22 @@ class ResultsScreen extends StatelessWidget {
                 ),
               ),
               Expanded(
-                child: Padding(
+                child: SingleChildScrollView(
                   padding: const EdgeInsets.all(24.0),
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Icon(
                         _getScoreIcon(percentage),
-                        size: 100,
+                        size: 80,
                         color: _getScoreColor(percentage, theme),
                       ),
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 16),
                       Text(
                         'Quiz Completed!',
-                        style: theme.textTheme.headlineLarge,
+                        style: theme.textTheme.headlineLarge?.copyWith(fontSize: 28),
                         textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 24),
                       Card(
                         elevation: 12,
                         shape: RoundedRectangleBorder(
@@ -87,20 +86,20 @@ class ResultsScreen extends StatelessWidget {
                         ),
                         child: Container(
                           width: double.infinity,
-                          padding: const EdgeInsets.all(32),
+                          padding: const EdgeInsets.all(24),
                           child: Column(
                             children: [
                               Text(
                                 'Your Score',
-                                style: theme.textTheme.headlineMedium?.copyWith(
+                                style: theme.textTheme.titleLarge?.copyWith(
                                   color: theme.colorScheme.onSurface.withOpacity(0.7),
                                 ),
                               ),
-                              const SizedBox(height: 16),
+                              const SizedBox(height: 12),
                               Text(
                                 '$score/$total',
                                 style: theme.textTheme.headlineLarge?.copyWith(
-                                  fontSize: 48,
+                                  fontSize: 36,
                                   fontWeight: FontWeight.bold,
                                   color: _getScoreColor(percentage, theme),
                                 ),
@@ -108,21 +107,21 @@ class ResultsScreen extends StatelessWidget {
                               const SizedBox(height: 8),
                               Text(
                                 '$percentage% Correct',
-                                style: theme.textTheme.titleLarge?.copyWith(
+                                style: theme.textTheme.titleMedium?.copyWith(
                                   color: _getScoreColor(percentage, theme),
                                 ),
                               ),
-                              const SizedBox(height: 16),
+                              const SizedBox(height: 12),
                               Text(
                                 _getScoreMessage(percentage),
-                                style: theme.textTheme.bodyLarge,
+                                style: theme.textTheme.bodyMedium,
                                 textAlign: TextAlign.center,
                               ),
                             ],
                           ),
                         ),
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 20),
                       Card(
                         elevation: 8,
                         child: Padding(
@@ -136,7 +135,7 @@ class ResultsScreen extends StatelessWidget {
                                   fontWeight: FontWeight.bold,
                                 ),
                               ),
-                              const SizedBox(height: 16),
+                              const SizedBox(height: 12),
                               ...appProvider.questions.asMap().entries.map((entry) {
                                 int index = entry.key;
                                 var question = entry.value;
@@ -144,12 +143,12 @@ class ResultsScreen extends StatelessWidget {
                                 bool isCorrect = userAnswer == question.answerIndex;
                                 
                                 return Padding(
-                                  padding: const EdgeInsets.only(bottom: 12.0),
+                                  padding: const EdgeInsets.only(bottom: 8.0),
                                   child: Row(
                                     children: [
                                       Container(
-                                        width: 32,
-                                        height: 32,
+                                        width: 28,
+                                        height: 28,
                                         decoration: BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: isCorrect 
@@ -159,23 +158,16 @@ class ResultsScreen extends StatelessWidget {
                                         child: Icon(
                                           isCorrect ? Icons.check : Icons.close,
                                           color: isCorrect ? Colors.green : Colors.red,
-                                          size: 20,
+                                          size: 16,
                                         ),
                                       ),
                                       const SizedBox(width: 12),
                                       Expanded(
                                         child: Text(
-                                          'Question ${index + 1}',
-                                          style: theme.textTheme.bodyMedium,
+                                          'Q${index + 1}: ${isCorrect ? 'Correct' : 'Wrong'}',
+                                          style: theme.textTheme.bodySmall,
                                         ),
                                       ),
-                                      if (!isCorrect && userAnswer != null)
-                                        Text(
-                                          'Your: ${question.options[userAnswer]}',
-                                          style: theme.textTheme.bodySmall?.copyWith(
-                                            color: Colors.red,
-                                          ),
-                                        ),
                                     ],
                                   ),
                                 );
@@ -184,7 +176,7 @@ class ResultsScreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      const SizedBox(height: 32),
+                      const SizedBox(height: 24),
                       Row(
                         children: [
                           Expanded(
@@ -196,18 +188,18 @@ class ResultsScreen extends StatelessWidget {
                                 backgroundColor: theme.colorScheme.surface,
                                 foregroundColor: theme.colorScheme.onSurface,
                                 elevation: 4,
-                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                padding: const EdgeInsets.symmetric(vertical: 14),
                               ),
                             ),
                           ),
-                          const SizedBox(width: 16),
+                          const SizedBox(width: 12),
                           Expanded(
                             child: ElevatedButton.icon(
                               onPressed: () => _goHome(context),
                               icon: const Icon(Icons.home),
                               label: const Text('Go Home'),
                               style: ElevatedButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(vertical: 16),
+                                padding: const EdgeInsets.symmetric(vertical: 14),
                               ),
                             ),
                           ),

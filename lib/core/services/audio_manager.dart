@@ -27,7 +27,7 @@ class AudioManager {
     try {
       await _musicPlayer.setReleaseMode(ReleaseMode.loop);
       await _musicPlayer.setVolume(0.3);
-      await _musicPlayer.play(AssetSource('audio/background_music.mp3'));
+      await _musicPlayer.play(AssetSource('audio/background_music.wav'));
       _isMusicPlaying = true;
     } catch (e) {
       print('Error playing background music: $e');
